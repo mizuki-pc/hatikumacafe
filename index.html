@@ -9,7 +9,8 @@
   <!--フォント-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
   <title>はちくまカフェ</title>
 </head>
 
@@ -29,10 +30,10 @@
     </section>
   </header>
   <main>
-      <section class="p-full">
-        <h1><img src="assets/images/logo.png"></h1>
-      </section>
-      <section class="l-main">
+    <section class="p-full">
+      <h1><img src="assets/images/logo.png"></h1>
+    </section>
+    <section class="l-main">
       <section id="concept" class="p-concept">
         <h2>はちみつで<span>幸せ</span>たっぷり</h2>
         <p>
@@ -41,33 +42,62 @@
           蜂蜜たっぷりのハニーフレンチトーストと自家製はちみつドリンクで<br>
           ゆったりとしたひとときをお過ごしください♪
         </p>
+        <div class="p-concept__bear"><img src="assets/images/bear1.png"></div>
       </section>
+
       <section id="menu" class="p-menu">
+        <section class="c-wave">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"></path>
+          </svg>
+        </section>
         <h2>メニュー</h2>
-        <div>はちくまカレー</div>
-        <div>￥950</div>
-        <p>ランチメニューで大人気の北欧風ミートボールのダルカレー。
-          4種類のお豆と煮込んで溶かしたかぼちゃ、トマト、インゲン、玉ねぎが入っています。隠し味に蜂蜜と有機コーヒー豆のエスプレッソ。辛さは中辛より甘めです。隠し味があって少しビターなので辛口派にもおすすめ。
-        </p>
-
-        <div>ハニーフレンチトースト</div>
-        <div>ハーフ(8個) ￥890</div>
-        <div>ホール(17個) ￥1560</div>
-        <p>ご注文いただいてからじっくり焼き上げます。1つ1つが小さな蜂の巣の形になっているので、どこから食べてもサクサク感が楽しめます。生地に合わせてクセのないはちみつを使用しているので、さっぱりとした味わいです。
-        </p>
-
-        <div>はちみつチーズケーキ</div>
-        <div>￥660</div>
-        <p>砂糖不使用!甘さは蜂蜜だけ♪クマの足跡がポイントです。しっとり濃厚でずっしりとしたベイクドチーズケーキ。甘すぎないので大人向け。オプションで蜂蜜を付けられるので追い蜂蜜もおすすめ♪男性にも大好評のスイーツです。
-        </p>
-
-        <div><a href="#">詳しくみる</a></div>
+        <section class="p-menu__flex p-menu__menu1">
+          <div><img src="assets/images/curry.png"></div>
+          <div>
+            <h3>はちくまカレー</h3>
+            <p>￥950</p>
+            <p class="p-menu__text">ランチメニューで大人気の北欧風ミートボールのダルカレー。
+              4種類のお豆と煮込んで溶かしたかぼちゃ、トマト、インゲン、玉ねぎが入っています。隠し味に蜂蜜と有機コーヒー豆のエスプレッソ。辛さは中辛より甘めです。隠し味があって少しビターなので辛口派にもおすすめ。
+            </p>
+          </div>
+        </section>
+        <section class="p-menu__flex p-menu__menu2">
+          <div>
+            <h3>ハニーフレンチトースト</h3>
+            <p>ハーフ(8個) ￥890</p>
+            <p>ホール(17個) ￥1560</p>
+            <p class="p-menu__text">ご注文いただいてからじっくり焼き上げます。1つ1つが小さな蜂の巣の形になっているので、どこから食べてもサクサク感が楽しめます。生地に合わせてクセのないはちみつを使用しているので、さっぱりとした味わいです。
+            </p>
+          </div>
+          <div class="p-menu__img"><img src="assets/images/frenchtoast.png"></div>
+        </section>
+        <section class="p-menu__flex p-menu__menu3">
+          <div><img src="assets/images/cheesecake.png"></div>
+          <div>
+            <h3>はちみつチーズケーキ</h3>
+            <p>￥660</p>
+            <p class="p-menu__text">砂糖不使用!甘さは蜂蜜だけ♪クマの足跡がポイントです。しっとり濃厚でずっしりとしたベイクドチーズケーキ。甘すぎないので大人向け。オプションで蜂蜜を付けられるので追い蜂蜜もおすすめ♪男性にも大好評のスイーツです。
+            </p>
+          </div>
+        </section>
+        <div class="c-button"><a href="#" class="btn btn--orange btn--radius">詳しくみる</a></div>
+        <section class="c-wave">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"></path>
+          </svg>
+        </section>
       </section>
       <section id="news" class="p-news">
+
         <h2>お知らせ</h2>
-        <div>NEW</div>
+        <div class="p-news__new">NEW</div>
         <img src="assets/images/news.jpg" alt="">
-        <div><a href="#">詳しくみる</a></div>
+        <div class="c-button"><a href="#" class="btn btn--orange btn--radius">詳しくみる</a></div>
       </section>
       <section id="access" class="p-access">
         <h2>アクセス</h2>

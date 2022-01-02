@@ -1,0 +1,17 @@
+.c-button {
+    padding: 70px 0 200px;
+    font-size: 1.2em;
+    .btn--orange,
+    a.btn--orange {
+        padding: 20px 100px;
+        color: $color_brown;
+        background-color: #fff;
+    }
+    .btn--orange:hover,
+    a.btn--orange:hover {
+        opacity: 0.5;
+    }
+    a.btn--radius {
+        border-radius: 100vh;
+    }
+}

@@ -1,0 +1,16 @@
+.c-wave {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 58px;
+        transform: rotateY(180deg);
+    }
+    .shape-fill {
+        fill: #fff;
+    }
+}

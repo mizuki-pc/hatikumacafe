@@ -1,3 +1,10 @@
 .p-access{
-    width: 100%;
+    text-align: center;
+    background-color: $color_yellow;
+    h2{
+        border-bottom: 3px dotted #fff;
+    }
+    p,div{
+    text-align: left;
+    }
 }
