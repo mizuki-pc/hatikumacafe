@@ -1,10 +1,40 @@
-h1,h2{
-  font-family: $main_font;
+@charset "UTF-8";
+
+//================================================
+// サイトの基本設定
+//================================================
+
+// 幅関係の設定------------------------------------
+$width_main: 1200px; //メインエリアの幅
+
+// フォント関係の設定-------------------------------
+$font_kaisei: "Kaisei Decol", sans-serif;
+$font_noto: "Noto Sans JP", sans-serif;
+
+// 色関係の設定------------------------------------
+$color_yellow: #f6ce54;
+$color_brown: #2e0c04;
+
+// ブレイクポイント--------------------------------
+$breakpoints: (
+  sp: "screen and (max-width:768px)",
+  pc: "screen and (min-width:769px)",
+);
+html{
+  overflow-x: hidden;
 }
-div,p,ul{
-  font-family: $sub_font;
+body{
+  font-family: $font_noto;
 }
-a{
-  color: #000;
+a {
+  color: $color_brown;
   text-decoration: none;
+}
+h2 {
+  font-family: $font_kaisei;
+  font-size: 2em;
+  text-align: center;
+  span{
+    color: $color_yellow;
+  }
 }

@@ -4,7 +4,6 @@
 // foundation
 //================================================
 @import "foundation/reset";
-@import "foundation/config";
 @import "foundation/base";
 
 //================================================
@@ -17,7 +16,11 @@
 //================================================
 // project
 //================================================
-@import "object/project/full"
+@import "object/project/full";
+@import "object/project/concept";
+@import "object/project/menu";
+@import "object/project/news";
+@import "object/project/access";
 
 //================================================
 // component

@@ -153,23 +153,77 @@ legend {
   display: none;
 }
 
-h1, h2 {
-  font-family: "Kaisei Decol", serif;
+html {
+  overflow-x: hidden;
 }
 
-div, p, ul {
+body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
 a {
-  color: #000;
+  color: #2e0c04;
   text-decoration: none;
 }
 
+h2 {
+  font-family: "Kaisei Decol", sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 span {
+  color: #f6ce54;
+}
+
+.l-header ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.l-footer {
+  margin: 0 auto;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .p-full {
+  text-align: center;
+  margin: 0 auto;
   background: url(../images/main.png) no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100vh;
+}
+
+.p-concept {
+  text-align: center;
+}
+
+.p-menu {
+  width: 100%;
+}
+
+.p-news {
+  width: 100%;
+}
+
+.p-access {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
