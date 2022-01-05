@@ -10,13 +10,17 @@
         font-size: 1.2em;
         padding: 0 50px;
     }
-    p {
-        padding-left: 10px;
-        font-size: 0.8em;
-        text-align: left;
-        flex: 1;
-        line-height: 2em;
+    &__txt{
+        text-align: center;
+        p {
+            padding-left: 10px;
+            font-size: 0.8em;
+            text-align: left;
+            flex: 1;
+            line-height: 2em;
+        }
     }
+    
     &__shop1,
     &__shop2 {
         width: 57.5%;

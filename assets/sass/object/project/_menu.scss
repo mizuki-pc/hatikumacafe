@@ -1,6 +1,7 @@
 .p-menu{
     text-align: center;
     background-color: $color_yellow;
+    position: relative;
     h2{
         padding-top: 115px;
         border-bottom: 3px dotted #fff;
@@ -43,15 +44,15 @@
         margin-top: -50px;
     }
     &__bear1 img{
-        width: 45%;
+        width: 40%;
         position: absolute;
-        top: 228%;
-        right: 2%;
+        top: 0;
+        right: 0;
     }
     &__bear2 img{
-        width: 45%;
+        width: 40%;
         position: absolute;
-        top: 456%;
-        right: 54%;
+        top: 75%;
+        right: 60%;
     }
 }
