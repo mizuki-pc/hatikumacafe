@@ -9,13 +9,15 @@
   <!--フォント-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
   <!--ビューポート-->
   <meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1">
   <!--ファビコン-->
   <link rel="icon" href="assets/images/favicon.ico">
   <title>はちくまカフェ | 北欧の森をイメージした、はちみつ専門カフェ。はちみつたっぷりの料理をご提供します♪</title>
-  <meta data-react-helmet="true" name="description" content="池袋のはちみつ専門カフェ。はちみつたっぷりのハニーフレンチトーストと自家製はちみつドリンクでゆったりとしたひとときをお過ごしください♪">
+  <meta data-react-helmet="true" name="description"
+    content="池袋のはちみつ専門カフェ。はちみつたっぷりのハニーフレンチトーストと自家製はちみつドリンクでゆったりとしたひとときをお過ごしください♪">
   <meta data-react-helmet="true" name="keywords" content="はちくまカフェ,はちみつカフェ,はちくま">
 </head>
 
@@ -39,6 +41,7 @@
       <h1><img src="assets/images/logo.png"></h1>
     </section>
     <section class="l-main">
+
       <section id="concept" class="p-concept">
         <h2>はちみつで<span>幸せ</span>たっぷり</h2>
         <p>
@@ -59,6 +62,8 @@
           </svg>
         </section>
         <h2>メニュー</h2>
+        <div class="p-menu__bear1"><img src="assets/images/bear2.png"></div>
+        <section class="p-menu__menuwrap">
         <section class="p-menu__flex p-menu__menu1">
           <div><img src="assets/images/curry.png"></div>
           <div>
@@ -90,45 +95,60 @@
             </p>
           </div>
         </section>
-        <div class="c-button"><a href="#" class="btn btn--orange btn--radius">詳しくみる</a></div>
+        </section>
+        <div class="c-button c-button__white__padding"><a href="#" class="c-button__white">詳しくみる</a></div>
+        <div class="p-menu__bear2"><img src="assets/images/bear3.png" alt=""></div>
         <section class="c-wave">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"></path>
-          </svg>
+          <section class="c-wave__bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+              preserveAspectRatio="none">
+              <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"></path>
+            </svg>
+          </section>
         </section>
       </section>
-      <section id="news" class="p-news">
 
+      <section id="news" class="p-news">
         <h2>お知らせ</h2>
         <div class="p-news__new">NEW</div>
         <img src="assets/images/news.jpg" alt="">
-        <div class="c-button"><a href="#" class="btn btn--orange btn--radius">詳しくみる</a></div>
+        <div class="c-button c-button__yellow__padding"><a href="#" class="c-button__yellow">詳しくみる</a></div>
       </section>
+
       <section id="access" class="p-access">
+        <section class="c-wave">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"></path>
+          </svg>
+        </section>
         <h2>アクセス</h2>
-        <div>はちくまカフェ池袋店</div>
-        <p>
-          東京都豊島区東池袋3-11-3 1階<br>
-          Tel.03-5944-8924<br>
-          営業時間 11:30～19:30<br>
-          池袋駅各線 東口より徒歩約9分
-        </p>
-        <div><a href="#">Google Map</a></div>
-
-        <div>はちくまカフェ南池袋店</div>
-        <p>
-          東京都豊島区雑司が谷3-12-3 1階<br>
-          Tel.03-6912-5089<br>
-          営業時間 11:30～18:30<br>
-          池袋駅各線 東口より徒歩約9分<br>
-          副都心線雑司が谷駅 出口２より徒歩4分
-        </p>
-        <div><a href="#">Google Map</a></div>
-
+        <section class="p-access__shop1">
+          <h3 class="p-access__shopname">はちくまカフェ<br>池袋店</h3>
+          <p>
+            東京都豊島区東池袋3-11-3 1階<br>
+            Tel.03-5944-8924<br>
+            営業時間 11:30～19:30<br>
+            池袋駅各線 東口より徒歩約9分
+          </p>
+          <div class="c-button c-button__padding"><a href="#" class="c-button__map">Google Map</a></div>
+        </section>
+        <section class="p-access__shop2">
+          <h3>はちくまカフェ<br>南池袋店</h3>
+          <p>
+            東京都豊島区雑司が谷3-12-3 1階<br>
+            Tel.03-6912-5089<br>
+            営業時間 11:30～18:30<br>
+            副都心線雑司が谷駅 出口２より徒歩4分
+          </p>
+          <div class="c-button c-button__padding"><a href="#" class="c-button__map">Google Map</a></div>
+      </section>
       </section>
     </section>
+
     <footer>
       <section class="l-footer">
         <a href="#"><img src="assets/images/logo.png" height="200" width="272" alt=""></a>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
  * http://cssreset.com
@@ -5,8 +6,8 @@
  * http://yuilibrary.com/license/
  */
 /*
- TODO will need to remove settings on HTML since we can't namespace it.
- TODO with the prefix, should I group by selector or property for weight savings?
+TODO will need to remove settings on HTML since we can't namespace it.
+TODO with the prefix, should I group by selector or property for weight savings?
 */
 html {
   color: #000;
@@ -16,13 +17,8 @@ html {
   overflow-x: scroll;
 }
 
-/*
-   TODO remove settings on BODY since we can't namespace it.
-  */
-/*
-   TODO test putting a class on HEAD.
-    - Fails on FF.
-  */
+/*TODO remove settings on BODY since we can't namespace it.*/
+/*TODO test putting a class on HEAD.- Fails on FF.*/
 body,
 div,
 dl,
@@ -62,9 +58,7 @@ img {
   border: 0;
 }
 
-/*
-   TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
-  */
+/*TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...*/
 address,
 caption,
 cite,
@@ -153,13 +147,18 @@ legend {
   display: none;
 }
 
+/*補足*/
+a {
+  text-decoration: none;
+}
+
 html {
   overflow-x: hidden;
 }
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  /*background: url(../images/comp.jpg);*/
+  background: url(../images/comp.jpg);
   background-size: 100vw;
 }
 
@@ -196,16 +195,17 @@ h3 {
 }
 
 .l-main div, .l-main p {
-  width: 1200px;
   margin: 0 auto;
 }
 
 .l-footer {
+  padding: 100px 0 50px;
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #f6ce54;
 }
 
 .l-footer ul {
@@ -234,8 +234,8 @@ h3 {
 }
 
 .p-concept__bear img {
-  width: 50%;
-  margin-top: -23px;
+  width: 45%;
+  margin-top: -27px;
 }
 
 .p-menu {
@@ -244,7 +244,7 @@ h3 {
 }
 
 .p-menu h2 {
-  padding-top: 100px;
+  padding-top: 115px;
   border-bottom: 3px dotted #fff;
 }
 
@@ -281,6 +281,10 @@ h3 {
   display: flex;
 }
 
+.p-menu__menuwrap {
+  padding-bottom: 60px;
+}
+
 .p-menu__menu1 {
   margin-top: 80px;
 }
@@ -293,9 +297,27 @@ h3 {
   margin-top: -50px;
 }
 
+.p-menu__bear1 img {
+  width: 45%;
+  position: absolute;
+  top: 228%;
+  right: 2%;
+}
+
+.p-menu__bear2 img {
+  width: 45%;
+  position: absolute;
+  top: 456%;
+  right: 54%;
+}
+
 .p-news {
   padding-top: 110px;
   text-align: center;
+}
+
+.p-news h2 {
+  padding-top: 15px;
 }
 
 .p-news__new {
@@ -313,11 +335,48 @@ h3 {
 }
 
 .p-access h2 {
+  padding-top: 55px;
   border-bottom: 3px dotted #fff;
+  margin-bottom: 55px;
 }
 
-.p-access p, .p-access div {
+.p-access h3 {
+  font-size: 1.2em;
+  padding: 0 50px;
+}
+
+.p-access p {
+  padding-left: 10px;
+  font-size: 0.8em;
   text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2em;
+}
+
+.p-access__shop1, .p-access__shop2 {
+  width: 57.5%;
+  background-color: #fff;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-access__shop1 {
+  padding: 65px 50px 50px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.p-access__shop2 {
+  padding: 50px 50px 65px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .c-wave {
@@ -328,37 +387,73 @@ h3 {
           transform: rotate(180deg);
 }
 
+.c-wave__bottom {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
 .c-wave svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 58px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  height: 40px;
 }
 
 .c-wave .shape-fill {
   fill: #fff;
 }
 
-.c-button {
-  padding: 70px 0 200px;
-  font-size: 1.2em;
-}
-
-.c-button .btn--orange,
-.c-button a.btn--orange {
-  padding: 20px 100px;
-  color: #2e0c04;
+.c-button__white,
+.c-button__white a {
+  border-radius: 100vh;
+  padding: 15px 110px;
+  color: #f6ce54;
   background-color: #fff;
 }
 
-.c-button .btn--orange:hover,
-.c-button a.btn--orange:hover {
-  opacity: 0.5;
+.c-button__white:hover,
+.c-button__white a:hover {
+  background-color: #2e0c04;
+  color: #fff;
 }
 
-.c-button a.btn--radius {
+.c-button__yellow,
+.c-button__yellow a {
   border-radius: 100vh;
+  padding: 15px 110px;
+  color: #fff;
+  background-color: #f6ce54;
+}
+
+.c-button__yellow:hover,
+.c-button__yellow a:hover {
+  background-color: #2e0c04;
+  color: #f6ce54;
+}
+
+.c-button__map,
+.c-button__map a {
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #f6ce54;
+}
+
+.c-button__map:hover,
+.c-button__map a:hover {
+  background-color: #2e0c04;
+  color: #f6ce54;
+}
+
+.c-button__padding {
+  padding: 0 50px;
+}
+
+.c-button__white__padding {
+  padding-bottom: 220px;
+}
+
+.c-button__yellow__padding {
+  padding: 80px 0 100px;
 }
 /*# sourceMappingURL=style.css.map */

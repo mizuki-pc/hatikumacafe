@@ -1,17 +1,44 @@
 .c-button {
-    padding: 70px 0 200px;
-    font-size: 1.2em;
-    .btn--orange,
-    a.btn--orange {
-        padding: 20px 100px;
-        color: $color_brown;
-        background-color: #fff;
-    }
-    .btn--orange:hover,
-    a.btn--orange:hover {
-        opacity: 0.5;
-    }
-    a.btn--radius {
+    &__white,
+    &__white a {
         border-radius: 100vh;
+        padding: 15px 110px;
+        color: $color_yellow;
+        background-color: #fff;
+        &:hover {
+            background-color: $color_brown;
+            color: #fff;
+        }
     }
+    &__yellow,
+    &__yellow a {
+        border-radius: 100vh;
+        padding: 15px 110px;
+        color: #fff;
+        background-color: $color_yellow;
+        &:hover {
+            background-color: $color_brown;
+            color: $color_yellow;
+        }
+    }
+    &__map,
+    &__map a {
+        border-radius: 5px;
+        padding: 10px 30px;
+        color: #fff;
+        background-color: $color_yellow;
+        &:hover {
+            background-color: $color_brown;
+            color: $color_yellow;
+        }
+    }
+}
+.c-button__padding{
+    padding: 0 50px;
+}
+.c-button__white__padding{
+    padding-bottom: 220px;
+}
+.c-button__yellow__padding{
+    padding: 80px 0 100px;
 }

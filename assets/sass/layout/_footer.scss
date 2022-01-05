@@ -1,7 +1,9 @@
 .l-footer{
+    padding: 100px 0 50px;
     margin: 0 auto;
-    width: $width_main;
+    width: 100%;
     display: flex;
+background-color: $color_yellow;
     ul{
         display: flex;
     }

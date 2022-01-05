@@ -1,10 +1,38 @@
-.p-access{
+.p-access {
     text-align: center;
     background-color: $color_yellow;
-    h2{
+    h2 {
+        padding-top: 55px;
         border-bottom: 3px dotted #fff;
+        margin-bottom: 55px;
     }
-    p,div{
-    text-align: left;
+    h3 {
+        font-size: 1.2em;
+        padding: 0 50px;
+    }
+    p {
+        padding-left: 10px;
+        font-size: 0.8em;
+        text-align: left;
+        flex: 1;
+        line-height: 2em;
+    }
+    &__shop1,
+    &__shop2 {
+        width: 57.5%;
+        background-color: #fff;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    &__shop1 {
+        padding: 65px 50px 50px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    &__shop2 {
+        padding: 50px 50px 65px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
 }
