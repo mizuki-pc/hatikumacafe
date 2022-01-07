@@ -260,6 +260,7 @@ h3 {
 .p-concept {
   padding: 50px 0 0;
   text-align: center;
+  position: relative;
 }
 
 .p-concept p {
@@ -270,6 +271,46 @@ h3 {
 .p-concept__bear img {
   width: 45%;
   margin-top: -27px;
+}
+
+.p-concept__flower1 img {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+}
+
+.p-concept__flower2 img {
+  width: 20%;
+  height: auto;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+  position: absolute;
+  top: 5%;
+  right: 25%;
+}
+
+@media (max-width: 1650px) {
+  .p-concept {
+    /* 横幅が1650px以下の場合に適用するスタイル */
+  }
+  .p-concept__flower1 img {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 3%;
+    left: 15%;
+  }
+  .p-concept__flower2 img {
+    width: 30%;
+    height: auto;
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+    position: absolute;
+    top: 3%;
+    right: 15%;
+  }
 }
 
 .p-menu {
