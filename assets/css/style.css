@@ -326,6 +326,10 @@ h3 {
 
 .p-menu__menu2 {
   margin-top: -50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
 }
 
 .p-menu__menu3 {
