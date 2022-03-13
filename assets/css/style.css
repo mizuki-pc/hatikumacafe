@@ -257,8 +257,8 @@ h3 {
     /* 横幅が768px以下の場合に適用するスタイル */
   }
   .l-header ul li {
-    padding: 40px 8px 0;
-    font-size: 0.6em;
+    padding: 30px 5px 0;
+    font-size: 0.5em;
   }
 }
 
