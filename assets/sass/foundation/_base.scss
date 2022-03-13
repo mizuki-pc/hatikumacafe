@@ -13,7 +13,8 @@ $font_noto: "Noto Sans JP", sans-serif;
 
 // 色関係の設定------------------------------------
 $color_yellow: #f6ce54;
-$color_brown: #2e0c04;
+$color_brown: #3f1c00;
+$color_brown2: #835e25;
 
 // ブレイクポイント--------------------------------
 $breakpoints: (
@@ -27,6 +28,7 @@ body{
   font-family: $font_noto;
   /*background: url(../images/comp.jpg);*/
   background-size: 100vw;
+  color: $color_brown;
 }
 a {
   color: $color_brown;
@@ -36,6 +38,7 @@ h2 {
   display: inline-block;
   text-align: center;
   font-family: $font_kaisei;
+  color: $color_brown;
   font-size: 2em;
   letter-spacing: 0.3em;
   padding-bottom: 10px;
@@ -48,4 +51,13 @@ h3{
   font-family: $font_kaisei;
   font-size: 1.7em;
   letter-spacing: 0.3em;
+}
+.fade{
+  margin-top: 80vh;
+  text-align: center;
+  opacity : 0;
+  transition: opacity 2s;
+}
+.fade.view{
+  opacity: 1;
 }

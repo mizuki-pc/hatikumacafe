@@ -1,28 +1,36 @@
 .p-concept {
-    padding: 50px 0 0;
+    padding: 100px 0;
     text-align: center;
     position: relative;
-    p {
-        padding-top: 30px;
-        line-height: 3.8em;
+    br {
+        display: none;
+    }
+    &__txt {
+        div {
+            padding-top: 10px;
+            line-height: 3.8em;
+            br {
+                display: none;
+            }
+        }
     }
     &__bear img {
-        width: 45%;
-        margin-top: -27px;
+        width: 30%;
+        margin-top: 50px;
     }
     &__flower1 img {
-        width: 20%;
+        width: 15%;
         height: auto;
         position: absolute;
-        top: 5%;
+        top: 15%;
         left: 25%;
     }
     &__flower2 img {
-        width: 20%;
+        width: 15%;
         height: auto;
         transform: scale(-1, 1);
         position: absolute;
-        top: 5%;
+        top: 15%;
         right: 25%;
     }
 }
@@ -31,19 +39,64 @@
     .p-concept {
         /* 横幅が1650px以下の場合に適用するスタイル */
         &__flower1 img {
-            width: 30%;
+            width: 20%;
             height: auto;
             position: absolute;
-            top: 3%;
-            left: 15%;
+            top: 15%;
+            left: 20%;
         }
         &__flower2 img {
-            width: 30%;
+            width: 20%;
             height: auto;
             transform: scale(-1, 1);
             position: absolute;
-            top: 3%;
-            right: 15%;
+            top: 15%;
+            right: 20%;
+        }
+    }
+}
+@media (max-width: 1365px) {
+    .p-concept {
+        /* 横幅が1365px以下の場合に適用するスタイル */
+        &__flower1 img {
+            width: 20%;
+            height: auto;
+            position: absolute;
+            top: 15%;
+            left: 20%;
+        }
+        &__flower2 img {
+            width: 20%;
+            height: auto;
+            transform: scale(-1, 1);
+            position: absolute;
+            top: 15%;
+            right: 20%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .p-concept {
+        /* 横幅が768px以下の場合に適用するスタイル */
+        br {
+            display: inline;
+        }
+        &__txt {
+            div {
+                br {
+                    display: inline;
+                }
+            }
+        }
+        &__bear img {
+            width: 50%;
+            margin-top: 50px;
+        }
+        &__flower1 img {
+            display: none;
+        }
+        &__flower2 img {
+            display: none;
         }
     }
 }

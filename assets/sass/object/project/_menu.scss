@@ -2,6 +2,9 @@
     text-align: center;
     background-color: $color_yellow;
     position: relative;
+    br {
+        display: none;
+    }
     h2{
         padding-top: 115px;
         border-bottom: 3px dotted #fff;
@@ -19,17 +22,13 @@
         font-size: 0.8em;
         line-height: 2.2em;
     }
-    img{
-        width: 120%;
-        margin-left: -60px;
-    }
-    &__img img{
-        margin-left: -55px;
-    }
     &__flex{
         margin: 0 auto;
-        width: 1000px;
+        width: 70%;
         display: flex;
+        img{
+            width: 100%;
+        }
     }
     &__menuwrap{
         padding-bottom: 60px;
@@ -45,15 +44,127 @@
         margin-top: -50px;
     }
     &__bear1 img{
-        width: 40%;
+        width: 25%;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 5%;
+        right: 5%;
     }
     &__bear2 img{
-        width: 40%;
+        width: 35%;
         position: absolute;
         top: 75%;
         right: 60%;
+    }
+    &__tree1 img{
+        width: 21%;
+        position: absolute;
+        top: 5%;
+        right: 75%;
+    }
+    &__tree2 img{
+        width: 21%;
+        position: absolute;
+        top: 15%;
+        left: 75%;
+    }
+}
+@media (max-width: 1650px) {
+    .p-menu {
+        /* 横幅が1650px以下の場合に適用するスタイル */
+        &__bear2 img{
+            width: 35%;
+            position: absolute;
+            top: 80%;
+            right: 60%;
+        }
+        &__tree1 img{
+            width: 20%;
+            position: absolute;
+            top: 7%;
+            right: 77%;
+        }
+        &__tree2 img{
+            width: 20%;
+            position: absolute;
+            top: 42%;
+            left: 77%;
+        }
+    }
+}
+@media (max-width: 1365px) {
+    .p-menu {
+        /* 横幅が1365px以下の場合に適用するスタイル */
+        &__flex{
+            margin: 50px auto 25px auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 60%;
+            }
+        }
+        &__bear2 img{
+            width: 35%;
+            position: absolute;
+            top: 85%;
+            right: 60%;
+        }
+        &__tree1 img{
+            width: 20%;
+            position: absolute;
+            top: 7%;
+            right: 77%;
+        }
+        &__tree2 img{
+            width: 20%;
+            position: absolute;
+            top: 60%;
+            left: 77%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .p-menu {
+        /* 横幅が768px以下の場合に適用するスタイル */
+        br {
+            display: inline;
+        }
+        h3{
+            font-size: 1.2em;
+            padding: 20px 0 10px 0;
+        }
+        &__text{
+            padding-top: 10px;
+        }
+        &__price{
+            font-size: 0.8em;
+        }
+        &__flex{
+            margin: 50px auto 25px auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 60%;
+            }
+        }
+        &__bear2 img{
+            width: 35%;
+            position: absolute;
+            top: 88%;
+            right: 60%;
+        }
+        &__tree1 img{
+            width: 20%;
+            position: absolute;
+            top: 5%;
+            right: 77%;
+        }
+        &__tree2 img{
+            width: 20%;
+            position: absolute;
+            top: 77%;
+            left: 77%;
+        }
     }
 }

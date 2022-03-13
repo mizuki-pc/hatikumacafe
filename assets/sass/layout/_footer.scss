@@ -1,23 +1,47 @@
-.l-footer{
+.l-footer {
     padding: 100px 0 50px;
     margin: 0 auto;
     width: 100%;
-background-color: $color_yellow;
-&__logo{
-    text-align: center;
-}
-    ul{
+    background-color: $color_yellow;
+    position: relative;
+    &__logo {
+        text-align: center;
+    }
+    ul {
         display: flex;
         justify-content: center;
         padding: 0 0 20px;
-        margin-top: -20px;
-        li{
+        margin-top: 25px;
+        li {
             padding: 0 10px;
             font-weight: bold;
         }
     }
-    &__copy{
+    &__copy {
         text-align: center;
-        font-size: .8em;
+        font-size: 0.8em;
+    }
+    &__honeycomb2 img {
+        width: 22%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+@media (max-width: 768px) {
+    .l-footer {
+        /* 横幅が768px以下の場合に適用するスタイル */
+        ul {
+            display: flex;
+            justify-content: center;
+            padding: 0 0 20px;
+            margin-top: 25px;
+            flex-direction: column;
+            align-items: center;
+            li {
+                padding: 5px 0;
+                font-weight: bold;
+            }
+        }
     }
 }

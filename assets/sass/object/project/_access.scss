@@ -1,6 +1,7 @@
 .p-access {
     text-align: center;
     background-color: $color_yellow;
+    position: relative;
     h2 {
         padding-top: 55px;
         border-bottom: 3px dotted #fff;
@@ -20,7 +21,6 @@
             line-height: 2em;
         }
     }
-    
     &__shop1,
     &__shop2 {
         width: 57.5%;
@@ -38,5 +38,64 @@
         padding: 50px 50px 65px;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
+    }
+    &__honeycomb1 img{
+        width: 22%;
+        position: absolute;
+        top: 3%;
+        left: 0;
+    }
+}
+@media (max-width: 1240px) {
+    .p-access {
+        /* 横幅が1240px以下の場合に適用するスタイル */
+        &__txt{
+            text-align: center;
+            p {
+                padding-left: 0;
+                font-size: 0.8em;
+                text-align: center;
+                flex: 1;
+                line-height: 2em;
+                margin: 20px 0 50px 0;
+            }
+        }
+        &__shop1,
+        &__shop2 {
+            width: 25%;
+            background-color: #fff;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .p-access {
+        /* 横幅が768px以下の場合に適用するスタイル */
+        h3 {
+            padding: 0;
+        }
+        &__txt{
+            text-align: center;
+            p {
+                padding-left: 0;
+                font-size: 0.8em;
+                text-align: center;
+                flex: 1;
+                line-height: 2em;
+                margin: 20px 0 50px 0;
+            }
+        }
+        &__shop1,
+        &__shop2 {
+            width: 68%;
+            background-color: #fff;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
     }
 }

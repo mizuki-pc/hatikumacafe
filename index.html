@@ -15,6 +15,9 @@
   <meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1">
   <!--ファビコン-->
   <link rel="icon" href="assets/images/favicon.ico">
+  <!--フェード-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="index.js"></script>
   <title>はちくまカフェ | 北欧の森をイメージした、はちみつ専門カフェ。はちみつたっぷりの料理をご提供します♪</title>
   <meta data-react-helmet="true" name="description"
     content="池袋のはちみつ専門カフェ。はちみつたっぷりのハニーフレンチトーストと自家製はちみつドリンクでゆったりとしたひとときをお過ごしください♪">
@@ -26,12 +29,12 @@
     <section class="l-header">
       <nav>
         <ul>
-          <li><a href="#">ホーム</a></li>
-          <li><a href="#consept">コンセプト</a></li>
-          <li><a href="#menu">メニュー</a></li>
-          <li><a href="#news">お知らせ</a></li>
-          <li><a href="#access">アクセス</a></li>
-          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#concept">CONCEPT</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#access">ACCESS</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
     </section>
@@ -43,16 +46,16 @@
     <section class="l-main">
 
       <section id="concept" class="p-concept">
-        <h2>はちみつで<span>幸せ</span>たっぷり</h2>
-        <p>
-          北欧のとある森のクマのカフェ。<br>
-          冒険が好きなハチとはちみつが好きなクマが出会いました。<br>
-          はちみつたっぷりのハニーフレンチトーストと自家製はちみつドリンクで<br>
-          ゆったりとしたひとときをお過ごしください♪
-        </p>
-        <div class="p-concept__flower1"><img src="assets/images/flower.png"></div>
-        <div class="p-concept__flower2"><img src="assets/images/flower.png"></div>
-        <div class="p-concept__bear"><img src="assets/images/bear1.png"></div>
+        <h2>はちみつで<br><span>幸せ</span>たっぷり</h2>
+        <div class="p-concept__txt">
+          <div>北欧のとある森のクマのカフェ。</div>
+          <div>冒険が好きなハチと<br>はちみつが好きなクマが出会いました。</div>
+          <div> はちみつたっぷりのフレンチトーストと<br>自家製はちみつドリンクで</div>
+          <div>ゆったりとしたひとときをお過ごしください♪</div>
+        </div>
+        <div class="p-concept__flower1 fade"><img src="assets/images/flower.png"></div>
+        <div class="p-concept__flower2 fade"><img src="assets/images/flower.png"></div>
+        <div class="p-concept__bear fade"><img src="assets/images/bear1.png"></div>
       </section>
 
       <section id="menu" class="p-menu">
@@ -64,34 +67,36 @@
           </svg>
         </section>
         <h2>メニュー</h2>
+        <div class="p-menu__tree1"><img src="assets/images/tree1.png"></div>
+        <div class="p-menu__tree2"><img src="assets/images/tree2.png"></div>
         <div class="p-menu__bear1"><img src="assets/images/bear2.png"></div>
         <section class="p-menu__menuwrap">
           <section class="p-menu__flex p-menu__menu1">
-            <div><img src="assets/images/curry.png"></div>
-            <div>
+            <div class="fade"><img src="assets/images/curry.png"></div>
+            <div class="fade">
               <h3>はちくまカレー</h3>
-              <p>￥950</p>
+              <p class="p-menu__price">￥950</p>
               <p class="p-menu__text">ランチメニューで大人気の北欧風ミートボールのダルカレー。
                 4種類のお豆と煮込んで溶かしたかぼちゃ、トマト、インゲン、玉ねぎが入っています。隠し味に蜂蜜と有機コーヒー豆のエスプレッソ。辛さは中辛より甘めです。隠し味があって少しビターなので辛口派にもおすすめ。
               </p>
             </div>
           </section>
           <section class="p-menu__flex p-menu__menu2">
-            <div class="p-menu__img"><img src="assets/images/frenchtoast.png"></div>
-            <div>
-              <h3>ハニーフレンチトースト</h3>
-              <p>ハーフ(8個) ￥890</p>
-              <p>ホール(17個) ￥1560</p>
+            <div class="p-menu__img fade"><img src="assets/images/frenchtoast.png"></div>
+            <div class="fade">
+              <h3>ハニー<br>フレンチトースト</h3>
+              <p class="p-menu__price">ハーフ(8個) ￥890</p>
+              <p class="p-menu__price">ホール(17個) ￥1560</p>
               <p class="p-menu__text">
                 ご注文いただいてからじっくり焼き上げます。1つ1つが小さな蜂の巣の形になっているので、どこから食べてもサクサク感が楽しめます。生地に合わせてクセのないはちみつを使用しているので、さっぱりとした味わいです。
               </p>
             </div>
           </section>
           <section class="p-menu__flex p-menu__menu3">
-            <div><img src="assets/images/cheesecake.png"></div>
-            <div>
-              <h3>はちみつチーズケーキ</h3>
-              <p>￥660</p>
+            <div class="fade"><img src="assets/images/cheesecake.png"></div>
+            <div class="fade">
+              <h3>はちみつ<br>チーズケーキ</h3>
+              <p class="p-menu__price">￥660</p>
               <p class="p-menu__text">
                 砂糖不使用!甘さは蜂蜜だけ♪クマの足跡がポイントです。しっとり濃厚でずっしりとしたベイクドチーズケーキ。甘すぎないので大人向け。オプションで蜂蜜を付けられるので追い蜂蜜もおすすめ♪男性にも大好評のスイーツです。
               </p>
@@ -114,7 +119,9 @@
 
       <section id="news" class="p-news">
         <h2>お知らせ</h2><br>
-        <img src="assets/images/news.jpg" alt="">
+        <div class="p-news__garland1"><img src="assets/images/garland.png"></div>
+        <div class="p-news__garland2"><img src="assets/images/garland.png"></div>
+        <div class="p-news__campaignimg fade"><img src="assets/images/news.jpg" alt=""></div>
         <div class="c-button c-button__yellow__padding"><a href="#" class="c-button__yellow">詳しくみる</a></div>
       </section>
 
@@ -127,6 +134,7 @@
           </svg>
         </section>
         <h2>アクセス</h2>
+        <div class="p-access__honeycomb1"><img src="assets/images/honeycomb1.png"></div>
         <section class="p-access__shop1">
           <h3 class="p-access__shopname">はちくまカフェ<br>池袋店</h3>
           <div class="p-access__txt">
@@ -156,14 +164,16 @@
 
     <footer>
       <section class="l-footer">
-        <div class="l-footer__logo"><a href="#"><img src="assets/images/logo.png" height="200" width="272" alt=""></a>
+        <div class="l-footer__honeycomb2"><img src="assets/images/honeycomb2.png"></div>
+        <div class="l-footer__logo"><a href="#"><img src="assets/images/logo.png" height="100" width="123" alt=""></a>
         </div>
         <nav>
           <ul>
-            <li><a href="#">CONCEPT</a></li>
-            <li><a href="#">MENU</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">ACCESS</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#consept">CONCEPT</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#access">ACCESS</a></li>
             <li><a href="#">CONTACT</a></li>
           </ul>
         </nav>
@@ -171,6 +181,20 @@
       </section>
     </footer>
   </main>
+  <!--フェード-->
+  <script>$(function () {
+      $(window).scroll(function () {
+        $('.fade').each(function () {
+          const targetElement = $(this).offset().top;
+          const scroll = $(window).scrollTop();
+          const windowHeight = $(window).height();
+          if (scroll > targetElement - windowHeight) {
+            $(this).addClass('view');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

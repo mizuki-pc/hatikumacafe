@@ -160,10 +160,11 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   /*background: url(../images/comp.jpg);*/
   background-size: 100vw;
+  color: #3f1c00;
 }
 
 a {
-  color: #2e0c04;
+  color: #3f1c00;
   text-decoration: none;
 }
 
@@ -171,6 +172,7 @@ h2 {
   display: inline-block;
   text-align: center;
   font-family: "Kaisei Decol", sans-serif;
+  color: #3f1c00;
   font-size: 2em;
   letter-spacing: 0.3em;
   padding-bottom: 10px;
@@ -187,20 +189,77 @@ h3 {
   letter-spacing: 0.3em;
 }
 
+.fade {
+  margin-top: 80vh;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.fade.view {
+  opacity: 1;
+}
+
 .l-header ul {
   width: 100%;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 100;
 }
 
 .l-header ul li {
-  padding: 20px 20px 0;
+  padding: 40px 30px 0;
   font-weight: bold;
+  letter-spacing: 0.2em;
+  font-size: 1.2em;
+}
+
+.l-header ul li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.l-header ul li a:hover {
+  color: #835e25;
+}
+
+.l-header ul li a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  border-bottom: dotted 3px #f6ce54;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.l-header ul li a:hover::after {
+  bottom: -5px;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .l-header {
+    /* 横幅が768px以下の場合に適用するスタイル */
+  }
+  .l-header ul li {
+    padding: 40px 8px 0;
+    font-size: 0.6em;
+  }
 }
 
 .l-main div, .l-main p {
@@ -212,6 +271,7 @@ h3 {
   margin: 0 auto;
   width: 100%;
   background-color: #f6ce54;
+  position: relative;
 }
 
 .l-footer__logo {
@@ -226,7 +286,7 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 0 20px;
-  margin-top: -20px;
+  margin-top: 25px;
 }
 
 .l-footer ul li {
@@ -236,7 +296,41 @@ h3 {
 
 .l-footer__copy {
   text-align: center;
-  font-size: .8em;
+  font-size: 0.8em;
+}
+
+.l-footer__honeycomb2 img {
+  width: 22%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .l-footer {
+    /* 横幅が768px以下の場合に適用するスタイル */
+  }
+  .l-footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 0 20px;
+    margin-top: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .l-footer ul li {
+    padding: 5px 0;
+    font-weight: bold;
+  }
 }
 
 .p-full {
@@ -257,37 +351,60 @@ h3 {
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .p-full {
+    /* 横幅が768px以下の場合に適用するスタイル */
+  }
+  .p-full h1 img {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
 .p-concept {
-  padding: 50px 0 0;
+  padding: 100px 0;
   text-align: center;
   position: relative;
 }
 
-.p-concept p {
-  padding-top: 30px;
+.p-concept br {
+  display: none;
+}
+
+.p-concept__txt div {
+  padding-top: 10px;
   line-height: 3.8em;
 }
 
+.p-concept__txt div br {
+  display: none;
+}
+
 .p-concept__bear img {
-  width: 45%;
-  margin-top: -27px;
+  width: 30%;
+  margin-top: 50px;
 }
 
 .p-concept__flower1 img {
-  width: 20%;
+  width: 15%;
   height: auto;
   position: absolute;
-  top: 5%;
+  top: 15%;
   left: 25%;
 }
 
 .p-concept__flower2 img {
-  width: 20%;
+  width: 15%;
   height: auto;
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
   position: absolute;
-  top: 5%;
+  top: 15%;
   right: 25%;
 }
 
@@ -296,20 +413,64 @@ h3 {
     /* 横幅が1650px以下の場合に適用するスタイル */
   }
   .p-concept__flower1 img {
-    width: 30%;
+    width: 20%;
     height: auto;
     position: absolute;
-    top: 3%;
-    left: 15%;
+    top: 15%;
+    left: 20%;
   }
   .p-concept__flower2 img {
-    width: 30%;
+    width: 20%;
     height: auto;
     -webkit-transform: scale(-1, 1);
             transform: scale(-1, 1);
     position: absolute;
-    top: 3%;
-    right: 15%;
+    top: 15%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 1365px) {
+  .p-concept {
+    /* 横幅が1365px以下の場合に適用するスタイル */
+  }
+  .p-concept__flower1 img {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
+  .p-concept__flower2 img {
+    width: 20%;
+    height: auto;
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+    position: absolute;
+    top: 15%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-concept {
+    /* 横幅が768px以下の場合に適用するスタイル */
+  }
+  .p-concept br {
+    display: inline;
+  }
+  .p-concept__txt div br {
+    display: inline;
+  }
+  .p-concept__bear img {
+    width: 50%;
+    margin-top: 50px;
+  }
+  .p-concept__flower1 img {
+    display: none;
+  }
+  .p-concept__flower2 img {
+    display: none;
   }
 }
 
@@ -317,6 +478,10 @@ h3 {
   text-align: center;
   background-color: #f6ce54;
   position: relative;
+}
+
+.p-menu br {
+  display: none;
 }
 
 .p-menu h2 {
@@ -340,21 +505,16 @@ h3 {
   line-height: 2.2em;
 }
 
-.p-menu img {
-  width: 120%;
-  margin-left: -60px;
-}
-
-.p-menu__img img {
-  margin-left: -55px;
-}
-
 .p-menu__flex {
   margin: 0 auto;
-  width: 1000px;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.p-menu__flex img {
+  width: 100%;
 }
 
 .p-menu__menuwrap {
@@ -378,36 +538,192 @@ h3 {
 }
 
 .p-menu__bear1 img {
-  width: 40%;
+  width: 25%;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5%;
+  right: 5%;
 }
 
 .p-menu__bear2 img {
-  width: 40%;
+  width: 35%;
   position: absolute;
   top: 75%;
   right: 60%;
 }
 
+.p-menu__tree1 img {
+  width: 21%;
+  position: absolute;
+  top: 5%;
+  right: 75%;
+}
+
+.p-menu__tree2 img {
+  width: 21%;
+  position: absolute;
+  top: 15%;
+  left: 75%;
+}
+
+@media (max-width: 1650px) {
+  .p-menu {
+    /* 横幅が1650px以下の場合に適用するスタイル */
+  }
+  .p-menu__bear2 img {
+    width: 35%;
+    position: absolute;
+    top: 80%;
+    right: 60%;
+  }
+  .p-menu__tree1 img {
+    width: 20%;
+    position: absolute;
+    top: 7%;
+    right: 77%;
+  }
+  .p-menu__tree2 img {
+    width: 20%;
+    position: absolute;
+    top: 42%;
+    left: 77%;
+  }
+}
+
+@media (max-width: 1365px) {
+  .p-menu {
+    /* 横幅が1365px以下の場合に適用するスタイル */
+  }
+  .p-menu__flex {
+    margin: 50px auto 25px auto;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .p-menu__flex img {
+    width: 60%;
+  }
+  .p-menu__bear2 img {
+    width: 35%;
+    position: absolute;
+    top: 85%;
+    right: 60%;
+  }
+  .p-menu__tree1 img {
+    width: 20%;
+    position: absolute;
+    top: 7%;
+    right: 77%;
+  }
+  .p-menu__tree2 img {
+    width: 20%;
+    position: absolute;
+    top: 60%;
+    left: 77%;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-menu {
+    /* 横幅が768px以下の場合に適用するスタイル */
+  }
+  .p-menu br {
+    display: inline;
+  }
+  .p-menu h3 {
+    font-size: 1.2em;
+    padding: 20px 0 10px 0;
+  }
+  .p-menu__text {
+    padding-top: 10px;
+  }
+  .p-menu__price {
+    font-size: 0.8em;
+  }
+  .p-menu__flex {
+    margin: 50px auto 25px auto;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .p-menu__flex img {
+    width: 60%;
+  }
+  .p-menu__bear2 img {
+    width: 35%;
+    position: absolute;
+    top: 88%;
+    right: 60%;
+  }
+  .p-menu__tree1 img {
+    width: 20%;
+    position: absolute;
+    top: 5%;
+    right: 77%;
+  }
+  .p-menu__tree2 img {
+    width: 20%;
+    position: absolute;
+    top: 77%;
+    left: 77%;
+  }
+}
+
 .p-news {
   padding-top: 110px;
   text-align: center;
+  position: relative;
 }
 
 .p-news h2 {
   padding-top: 15px;
 }
 
-.p-news img {
+.p-news__campaignimg img {
   padding-top: 50px;
   width: 65%;
+}
+
+.p-news__garland1 img {
+  width: 22%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 75%;
+}
+
+.p-news__garland2 img {
+  width: 22%;
+  height: auto;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+  position: absolute;
+  top: 0;
+  left: 75%;
+}
+
+@media (max-width: 1365px) {
+  .p-news {
+    /* 横幅が1365px以下の場合に適用するスタイル */
+  }
+  .p-news__campaignimg img {
+    width: 95%;
+  }
 }
 
 .p-access {
   text-align: center;
   background-color: #f6ce54;
+  position: relative;
 }
 
 .p-access h2 {
@@ -459,6 +775,84 @@ h3 {
   border-bottom-right-radius: 30px;
 }
 
+.p-access__honeycomb1 img {
+  width: 22%;
+  position: absolute;
+  top: 3%;
+  left: 0;
+}
+
+@media (max-width: 1240px) {
+  .p-access {
+    /* 横幅が1240px以下の場合に適用するスタイル */
+  }
+  .p-access__txt {
+    text-align: center;
+  }
+  .p-access__txt p {
+    padding-left: 0;
+    font-size: 0.8em;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    line-height: 2em;
+    margin: 20px 0 50px 0;
+  }
+  .p-access__shop1, .p-access__shop2 {
+    width: 25%;
+    background-color: #fff;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-access {
+    /* 横幅が768px以下の場合に適用するスタイル */
+  }
+  .p-access h3 {
+    padding: 0;
+  }
+  .p-access__txt {
+    text-align: center;
+  }
+  .p-access__txt p {
+    padding-left: 0;
+    font-size: 0.8em;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    line-height: 2em;
+    margin: 20px 0 50px 0;
+  }
+  .p-access__shop1, .p-access__shop2 {
+    width: 68%;
+    background-color: #fff;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .c-wave {
   width: 100%;
   overflow: hidden;
@@ -493,7 +887,7 @@ h3 {
 
 .c-button__white:hover,
 .c-button__white a:hover {
-  background-color: #2e0c04;
+  background-color: #3f1c00;
   color: #fff;
 }
 
@@ -507,7 +901,7 @@ h3 {
 
 .c-button__yellow:hover,
 .c-button__yellow a:hover {
-  background-color: #2e0c04;
+  background-color: #3f1c00;
   color: #f6ce54;
 }
 
@@ -521,7 +915,7 @@ h3 {
 
 .c-button__map:hover,
 .c-button__map a:hover {
-  background-color: #2e0c04;
+  background-color: #3f1c00;
   color: #f6ce54;
 }
 

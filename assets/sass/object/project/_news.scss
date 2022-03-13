@@ -1,11 +1,35 @@
 .p-news{
     padding-top: 110px;
     text-align: center;
+    position: relative;
     h2{
         padding-top: 15px;
     }
-    img{
+    &__campaignimg img{
         padding-top:50px;
         width: 65%;
+    }
+    &__garland1 img {
+        width: 22%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 75%;
+    }
+    &__garland2 img {
+        width: 22%;
+        height: auto;
+        transform: scale(-1, 1);
+        position: absolute;
+        top: 0;
+        left: 75%;
+    }
+}
+@media (max-width: 1365px) {
+    .p-news {
+        /* 横幅が1365px以下の場合に適用するスタイル */
+        &__campaignimg img{
+            width: 95%;
+        }
     }
 }
