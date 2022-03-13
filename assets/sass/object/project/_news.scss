@@ -28,8 +28,24 @@
 @media (max-width: 1365px) {
     .p-news {
         /* 横幅が1365px以下の場合に適用するスタイル */
+        padding-top: 50px;
         &__campaignimg img{
             width: 95%;
+        }
+        &__garland1 img {
+            width: 25%;
+            height: auto;
+            position: absolute;
+            top: 10%;
+            right: 75%;
+        }
+        &__garland2 img {
+            width: 25%;
+            height: auto;
+            transform: scale(-1, 1);
+            position: absolute;
+            top: 10%;
+            left: 75%;
         }
     }
 }

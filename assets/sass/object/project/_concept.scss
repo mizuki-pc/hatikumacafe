@@ -6,8 +6,8 @@
         display: none;
     }
     &__txt {
+        padding-top: 10px;
         div {
-            padding-top: 10px;
             line-height: 3.8em;
             br {
                 display: none;
@@ -82,7 +82,10 @@
             display: inline;
         }
         &__txt {
+            padding-top: 30px;
             div {
+                line-height: 2.5em;
+                font-size: 0.8em;
                 br {
                     display: inline;
                 }

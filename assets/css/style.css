@@ -257,8 +257,9 @@ h3 {
     /* 横幅が768px以下の場合に適用するスタイル */
   }
   .l-header ul li {
-    padding: 30px 5px 0;
-    font-size: 0.5em;
+    padding: 30px 8px 0;
+    font-size: 0.6em;
+    letter-spacing: 0;
   }
 }
 
@@ -376,8 +377,11 @@ h3 {
   display: none;
 }
 
-.p-concept__txt div {
+.p-concept__txt {
   padding-top: 10px;
+}
+
+.p-concept__txt div {
   line-height: 3.8em;
 }
 
@@ -459,6 +463,13 @@ h3 {
   .p-concept br {
     display: inline;
   }
+  .p-concept__txt {
+    padding-top: 30px;
+  }
+  .p-concept__txt div {
+    line-height: 2.5em;
+    font-size: 0.8em;
+  }
   .p-concept__txt div br {
     display: inline;
   }
@@ -503,6 +514,7 @@ h3 {
   text-align: left;
   font-size: 0.8em;
   line-height: 2.2em;
+  text-align: justify;
 }
 
 .p-menu__flex {
@@ -714,9 +726,26 @@ h3 {
 @media (max-width: 1365px) {
   .p-news {
     /* 横幅が1365px以下の場合に適用するスタイル */
+    padding-top: 50px;
   }
   .p-news__campaignimg img {
     width: 95%;
+  }
+  .p-news__garland1 img {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    right: 75%;
+  }
+  .p-news__garland2 img {
+    width: 25%;
+    height: auto;
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+    position: absolute;
+    top: 10%;
+    left: 75%;
   }
 }
 
